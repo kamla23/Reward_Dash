@@ -1,0 +1,113 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #85bc51;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: index 1000;
+    flex-flow: column;
+    padding: 8rem 2rem;
+    width: 20rem;
+    text-align: center;
+}
+
+header .rewardbar a {
+    display: block;
+    font-size: 2rem;
+    color: #000;
+    margin: 2rem 0;
+    text-decoration: none; 
+}
+
+.rewardbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+}
+
+.rewardbar button {
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rewardbar button:hover {
+    background-color: #7cc352;
+}
+
+
+.guru {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 400px;
+  
+}
+
+h1{
+    margin-left: 400px; 
+}
+.nav {
+    color: tomato;
+    font-family: 'Rajdhani', sans-serif;
+    border-top: 1px sloid tomato;
+    display: inline-block;
+    line-height: 1;
+}
+
+.gurukul {
+    font-family: 'Hind', serif;
+    border-top: 2px solid black;
+    display: inline-block;
+    line-height: 1;
+}
+
+.count {
+    display: flex;
+    gap: 20px;
+    margin-left: 400px;
+
+}
+.box{
+    background-color: #80c4f0;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: #000;
+}
+.box:hover{
+    background-color: aliceblue;
+    box-shadow: #34495e;
+}
+.expense table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 400px;
+  }
+  h2{
+    margin-left: 400px;
+  }
+  
+  .expense th,
+  .expense td {
+    border: 1px solid #93e95e;
+    padding: 10px;
+    text-align: left;
+    background-color: #6ec240;
+    color: white;
+  }
+
+  
+  
+  

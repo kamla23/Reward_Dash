@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus & House Overview</title>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+td[rowspan] {
+    background-color: #e2e2e2;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>📍 Campus & House Overview</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Campus</th>
+                    <th>House</th>
+                    <th>Academic Points 🏅</th>
+                    <th>Cultural Points 🏅</th>
+                    <th>Total Points 🏆</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Jashpur Campus -->
+                <tr>
+                    <td rowspan="3">🏫 Jashpur</td>
+                    <td>🏠 Malhar</td>
+                    <td>80</td>
+                    <td>70</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>🏠 Bhairav</td>
+                    <td>60</td>
+                    <td>75</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>🏠 Bageshri</td>
+                    <td>85</td>
+                    <td>80</td>
+                    <td>165</td>
+                </tr>
+
+                <!-- Udaipur Campus -->
+                <tr>
+                    <td rowspan="3">🏫 Udaipur</td>
+                    <td>🏠 Malhar</td>
+                    <td>70</td>
+                    <td>65</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>🏠 Bhairav</td>
+                    <td>55</td>
+                    <td>70</td>
+                    <td>125</td>
+                </tr>
+                <tr>
+                    <td>🏠 Bageshri</td>
+                    <td>90</td>
+                    <td>75</td>
+                    <td>165</td>
+                </tr>
+
+                <!-- Add more campuses here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

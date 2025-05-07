@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rewards Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .rewards-section {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .rewards-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* Filters Section */
+        .filters {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filters select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filters select:hover {
+            border-color: #888;
+        }
+
+        /* Grid Styling */
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Styling */
+        .reward-card {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #ffffff;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .reward-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .reward-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .reward-card.unavailable img {
+            filter: grayscale(100%);
+        }
+
+        .like {
+            margin: 10px 0;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .like:hover {
+            transform: scale(1.2);
+        }
+
+        .claim-status {
+            font-weight: bold;
+            margin-top: 8px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="rewards-section">
+        <h2>🏰 Rewards Section</h2>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select id="campusFilter">
+                <option value="all">All Campuses</option>
+                <option value="jashpur">Jashpur</option>
+                <option value="udaipur">Udaipur</option>
+                <option value="sarjapur">Sarjapur</option>
+                <option value="dharamshala">Dharamshala</option>
+                <option value="raipur">Raipur</option>
+                <option value="kishanganj">Kishanganj</option>
+                <option value="dantewada">Dantewada</option>
+                <option value="pune">Pune</option>
+                <option value="himachal">Himachal</option>
+            </select>
+
+            <select id="levelFilter">
+                <option value="all">All Levels</option>
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3">L3</option>
+                <option value="L4">L4</option>
+            </select>
+
+            <select id="availabilityFilter">
+                <option value="all">All</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select>
+        </div>
+
+        <!-- Rewards Grid -->
+        <div class="rewards-grid">
+            <!-- Jashpur -->
+            <div class="reward-card available" data-campus="jashpur" data-level="L1">
+                <img src="reward1.jpg" alt="Notebook Set">
+                <h3>Notebook Set</h3>
+                <p>Premium notebook for achievers.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="jashpur" data-level="L2">
+                <img src="reward2.jpg" alt="T-shirt">
+                <h3>Custom T-shirt</h3>
+                <p>Special edition tee for top scorers.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+            <!-- Udaipur -->
+            <div class="reward-card available" data-campus="udaipur" data-level="L1">
+                <img src="reward3.jpg" alt="Water Bottle">
+                <h3>Water Bottle</h3>
+                <p>Stylish and reusable bottle.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="udaipur" data-level="L3">
+                <img src="reward4.jpg" alt="Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Noise cancelling headset.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+            <!-- Sarjapur -->
+            <div class="reward-card available" data-campus="sarjapur" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="sarjapur" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+
+            <!-- Dharamshala -->
+            <div class="reward-card available" data-campus="Dharashala" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Dharamshala" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+            <!-- Raipur -->
+            <div class="reward-card available" data-campus="Raipur" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Raipur" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+            <!-- Kishanganj -->
+
+            <div class="reward-card available" data-campus="Kishanganj" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Kishanganj" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+            <!-- Dantewada -->
+
+            <div class="reward-card available" data-campus="Dantewada" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Dantewada" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+            <!-- Pune -->
+
+            <div class="reward-card available" data-campus="Pune" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Pune" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+            <!-- Himachal -->
+
+            <div class="reward-card available" data-campus="Himachal" data-level="L2">
+                <img src="reward5.jpg" alt="Badge">
+                <h3>Achievement Badge</h3>
+                <p>Show off your skill.</p>
+                <button class="like">❤️</button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Himachal" data-level="L4">
+                <img src="reward6.jpg" alt="Bag">
+                <h3>Backpack</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like">🤍</button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+        </div>
+
+        <script>
+            const campusFilter = document.getElementById("campusFilter");
+            const levelFilter = document.getElementById("levelFilter");
+            const availabilityFilter = document.getElementById("availabilityFilter");
+            const rewardCards = document.querySelectorAll(".reward-card");
+
+            function filterRewards() {
+                const selectedCampus = campusFilter.value.toLowerCase();
+                const selectedLevel = levelFilter.value.toUpperCase();
+                const selectedAvailability = availabilityFilter.value.toLowerCase();
+
+                rewardCards.forEach(card => {
+                    const cardCampus = card.getAttribute("data-campus").toLowerCase();
+                    const cardLevel = card.getAttribute("data-level").toUpperCase();
+                    const isAvailable = card.classList.contains("available") ? "available" : "unavailable";
+
+                    const campusMatch = selectedCampus === "all" || selectedCampus === cardCampus;
+                    const levelMatch = selectedLevel === "ALL" || selectedLevel === cardLevel;
+                    const availabilityMatch = selectedAvailability === "all" || selectedAvailability === isAvailable;
+
+                    if (campusMatch && levelMatch && availabilityMatch) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            campusFilter.addEventListener("change", filterRewards);
+            levelFilter.addEventListener("change", filterRewards);
+            availabilityFilter.addEventListener("change", filterRewards);
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bonus Points Section</title>
+  <style>
+    .bonus-section {
+      background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+      border-left: 5px solid #e17055;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+
+    .bonus-section h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #2d3436;
+    }
+
+    .bonus-section p {
+      font-size: 16px;
+      color: #444;
+      margin: 5px 0;
+    }
+
+    .bonus-section .highlight {
+      font-weight: bold;
+      color: #d63031;
+    }
+
+    .bonus-section .tip {
+      margin-top: 10px;
+      background-color: #ffeaa7;
+      padding: 8px 12px;
+      border-left: 4px solid #fdcb6e;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #2d3436;
+    }
+
+    .dismiss-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #d63031;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .dismiss-btn:hover {
+      background: #e17055;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bonus-section" id="bonusSection">
+    <button class="dismiss-btn" id="dismissBtn">Got It!</button>
+    <h3>🌟 Bonus Points Opportunity</h3>
+    <p>Understand how <span class="highlight">rewards are managed across campuses 🧠</span></p>
+    <p>Reflect this understanding in your <span class="highlight">dashboard 💡</span></p>
+    <div class="tip">
+      Bonus points for a <strong>clear end-to-end workflow</strong> that shows campus-wise logic integration.
+    </div>
+  </div>
+
+  <script>
+    const bonusSection = document.getElementById("bonusSection");
+    const dismissBtn = document.getElementById("dismissBtn");
+
+  
+    if (localStorage.getItem("bonusDismissed") === "true") {
+      bonusSection.style.display = "none";
+    }
+
+    dismissBtn.addEventListener("click", () => {
+      bonusSection.style.display = "none";
+      localStorage.setItem("bonusDismissed", "true");
+    });
+  </script>
+
+</body>
+</html>
