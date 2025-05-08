@@ -23,7 +23,6 @@ header .rewardbar a {
 }
 
 .rewardbar {
-    /* display: flex; */
     flex-direction: column;
     gap: 20px;
     padding: 5px;
@@ -90,6 +89,8 @@ h1{
     border-collapse: collapse;
     margin-top: 10px;
     margin-left: 400px;
+     height: 100%;
+    overflow: auto;
   }
   h2{
     margin-left: 400px;
