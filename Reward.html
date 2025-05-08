@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rewards Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -29,7 +30,6 @@
             color: #333;
         }
 
-        /* Filters Section */
         .filters {
             margin-bottom: 30px;
             display: flex;
@@ -52,14 +52,12 @@
             border-color: #888;
         }
 
-        /* Grid Styling */
-        .rewards-grid {
+        .rewards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
 
-        /* Card Styling */
         .reward-card {
             padding: 15px;
             border: 1px solid #ccc;
@@ -67,11 +65,12 @@
             text-align: center;
             background-color: #ffffff;
             transition: transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
 
         .reward-card:hover {
             transform: scale(1.03);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
         }
 
         .reward-card img {
@@ -85,19 +84,6 @@
             filter: grayscale(100%);
         }
 
-        .like {
-            margin: 10px 0;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .like:hover {
-            transform: scale(1.2);
-        }
-
         .claim-status {
             font-weight: bold;
             margin-top: 8px;
@@ -107,13 +93,11 @@
 </head>
 
 <body>
-
     <section class="rewards-section">
-        <h2>🏰 Rewards Section</h2>
+        <h2>REWARD SECTION</h2>
 
-        <!-- Filters -->
         <div class="filters">
-            <select id="campusFilter">
+            <select id="campus">
                 <option value="all">All Campuses</option>
                 <option value="jashpur">Jashpur</option>
                 <option value="udaipur">Udaipur</option>
@@ -126,7 +110,7 @@
                 <option value="himachal">Himachal</option>
             </select>
 
-            <select id="levelFilter">
+            <select id="level">
                 <option value="all">All Levels</option>
                 <option value="L1">L1</option>
                 <option value="L2">L2</option>
@@ -134,172 +118,198 @@
                 <option value="L4">L4</option>
             </select>
 
-            <select id="availabilityFilter">
+            <select id="availability">
                 <option value="all">All</option>
                 <option value="available">Available</option>
                 <option value="unavailable">Unavailable</option>
             </select>
         </div>
 
-        <!-- Rewards Grid -->
-        <div class="rewards-grid">
+
+        <div class="rewards">
             <!-- Jashpur -->
             <div class="reward-card available" data-campus="jashpur" data-level="L1">
-                <img src="reward1.jpg" alt="Notebook Set">
+                <img src="https://m.media-amazon.com/images/I/61oUmsL+mzL.jpg" alt="Notebook Set">
                 <h3>Notebook Set</h3>
                 <p>Premium notebook for achievers.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="jashpur" data-level="L2">
-                <img src="reward2.jpg" alt="T-shirt">
+                <img src="https://chriscross.in/cdn/shop/files/ChrisCrossNavyBlueCottonT-Shirt.jpg?v=1740994598"
+                    alt="T-shirt">
                 <h3>Custom T-shirt</h3>
                 <p>Special edition tee for top scorers.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
 
             <!-- Udaipur -->
             <div class="reward-card available" data-campus="udaipur" data-level="L1">
-                <img src="reward3.jpg" alt="Water Bottle">
+                <img src="https://nestasia.in/cdn/shop/files/waterbottlessetof3_26.jpg?v=1697650169" alt="Water Bottle">
                 <h3>Water Bottle</h3>
                 <p>Stylish and reusable bottle.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="udaipur" data-level="L3">
-                <img src="reward4.jpg" alt="Headphones">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQTP3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=SUFReFd6NEVVOW50TTcxUzVyWlhHZ2tuVHYzMERCZURia3c5SzJFOTlPZ3oveDdpQVpwS0ltY2w2UW05aU90TzVtaW9peGdOaitwV1Nxb1VublZoTVE"
+                    alt="Headphones">
                 <h3>Wireless Headphones</h3>
                 <p>Noise cancelling headset.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
 
             <!-- Sarjapur -->
             <div class="reward-card available" data-campus="sarjapur" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
+                <img src="https://printitonline.in/wp-content/uploads/2022/12/35d763db-80f1-4431-8720-4e82b83f6bb8.jpeg"
+                    alt="Badge">
                 <h3>Achievement Badge</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="sarjapur" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
+                <img src="https://m.media-amazon.com/images/I/61yMAsvoVSL._AC_UY1100_.jpg" alt="Bag">
                 <h3>Backpack</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
 
 
             <!-- Dharamshala -->
             <div class="reward-card available" data-campus="Dharashala" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://elctoys.qa/cdn/shop/products/215510638_1000x.png?v=1675752904" alt="Ball">
+                <h3>Ball</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Dharamshala" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://images-cdn.ubuy.co.in/6638e98c5eca1023a157d8e4-nuanchu-20-pcs-yoga-mats-bulk-for-kids.jpg"
+                    alt="Yoga mats">
+                <h3>Yoga Mats</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
 
             <!-- Raipur -->
             <div class="reward-card available" data-campus="Raipur" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://m.media-amazon.com/images/I/31LnhoH6p2L._AC_UF894,1000_QL80_.jpg" alt="Cricket Bat">
+                <h3>Cricket Bat</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Raipur" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://www.lifelongindiaonline.com/cdn/shop/files/01_513da276-75a8-4b6b-9f2b-f0e8550e1be1.jpg?v=1731420042"
+                    alt="Skating">
+                <h3>Skating</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
             <!-- Kishanganj -->
 
             <div class="reward-card available" data-campus="Kishanganj" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://c8.alamy.com/comp/2BX75R6/basketball-ring-with-a-net-and-ball-sport-2BX75R6.jpg"
+                    alt="Basket ball">
+                <h3>Basket ball net with Ring</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Kishanganj" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://www.mcstestingmachines.com/images/bmi-machines2.png" alt="BMI Machine">
+                <h3>BMI Machine</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
             <!-- Dantewada -->
 
             <div class="reward-card available" data-campus="Dantewada" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://m.media-amazon.com/images/I/81gj8DKhnFL.jpg" alt="Math Run">
+                <h3>Math Run</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Dantewada" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/musical-toy/c/u/0/electronic-digital-piano-keyboard-61-keys-multi-function-original-imagq6ahx8hyd46p.jpeg?q=90&crop=false"
+                    alt="Piano">
+                <h3>Piano</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
             <!-- Pune -->
 
             <div class="reward-card available" data-campus="Pune" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://m.media-amazon.com/images/I/61yEvHHViTL.jpg" alt="Tumbling Tower">
+                <h3>Tumbling Tower</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Pune" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://magazine.byu.edu/wp-content/uploads/2020/04/WEB_scrabble_2-DONE.jpg" alt="Scrable">
+                <h3>Scrable</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
             <!-- Himachal -->
 
             <div class="reward-card available" data-campus="Himachal" data-level="L2">
-                <img src="reward5.jpg" alt="Badge">
-                <h3>Achievement Badge</h3>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/466289486/BE/WE/JB/38526633/dart-board-2.png"
+                    alt="Dart Board">
+                <h3>Dart Board</h3>
                 <p>Show off your skill.</p>
-                <button class="like">❤️</button>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
                 <p class="claim-status">Claimed</p>
             </div>
             <div class="reward-card unavailable" data-campus="Himachal" data-level="L4">
-                <img src="reward6.jpg" alt="Bag">
-                <h3>Backpack</h3>
+                <img src="https://i.etsystatic.com/6107112/r/il/d2c19a/6353018240/il_fullxfull.6353018240_m7zu.jpg"
+                    alt="Story Cubes">
+                <h3>Story Cubes</h3>
                 <p>Strong & Stylish for learners.</p>
-                <button class="like">🤍</button>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
+                <p class="claim-status">Unavailable</p>
+            </div>
+
+            <div class="reward-card available" data-campus="Himachal" data-level="L2">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/2/HX/DR/FE/119765531/g-86263-spikeprovolleyballsystem-set-001-clean.jpg"
+                    alt="Volleyball Net">
+                <h3>Volleyball Net</h3>
+                <p>Show off your skill.</p>
+                <button class="like red-heart"><i class="fas fa-heart" style="color: red;"></i></button>
+                <p class="claim-status">Claimed</p>
+            </div>
+            <div class="reward-card unavailable" data-campus="Himachal" data-level="L4">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/punching-bag/k/t/k/24-inch-unfilled-punching-bag-2-feet-boxing-mma-training-original-imaguftfgbtxhwzz.jpeg?q=20&crop=false"
+                    alt="Punching Bag">
+                <h3>Punching Bag</h3>
+                <p>Strong & Stylish for learners.</p>
+                <button class="like white-heart"><i class="fas fa-heart" style="color: white;"></i></button>
                 <p class="claim-status">Unavailable</p>
             </div>
 
         </div>
 
         <script>
-            const campusFilter = document.getElementById("campusFilter");
-            const levelFilter = document.getElementById("levelFilter");
-            const availabilityFilter = document.getElementById("availabilityFilter");
+            const campus = document.getElementById("campus");
+            const level = document.getElementById("level");
+            const availability = document.getElementById("availability");
             const rewardCards = document.querySelectorAll(".reward-card");
 
             function filterRewards() {
-                const selectedCampus = campusFilter.value.toLowerCase();
-                const selectedLevel = levelFilter.value.toUpperCase();
-                const selectedAvailability = availabilityFilter.value.toLowerCase();
+                const selectedCampus = campus.value.toLowerCase();
+                const selectedLevel = level.value.toUpperCase();
+                const selectedAvailability = availability.value.toLowerCase();
 
                 rewardCards.forEach(card => {
                     const cardCampus = card.getAttribute("data-campus").toLowerCase();
@@ -317,10 +327,10 @@
                     }
                 });
             }
+            campus.addEventListener("change", filterRewards);
+            level.addEventListener("change", filterRewards);
+            availability.addEventListener("change", filterRewards);
 
-            campusFilter.addEventListener("change", filterRewards);
-            levelFilter.addEventListener("change", filterRewards);
-            availabilityFilter.addEventListener("change", filterRewards);
         </script>
 
 </body>

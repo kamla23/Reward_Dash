@@ -23,7 +23,7 @@ header .rewardbar a {
 }
 
 .rewardbar {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     gap: 20px;
     padding: 5px;
@@ -42,15 +42,12 @@ header .rewardbar a {
 }
 
 .rewardbar button:hover {
-    background-color: #7cc352;
+    background-color: #89b2c4;
 }
-
-
 .guru {
     font-size: 40px;
     font-weight: bold;
     margin-left: 400px;
-  
 }
 
 h1{
@@ -66,7 +63,6 @@ h1{
 
 .gurukul {
     font-family: 'Hind', serif;
-    border-top: 2px solid black;
     display: inline-block;
     line-height: 1;
 }
@@ -98,15 +94,14 @@ h1{
   h2{
     margin-left: 400px;
   }
-  
-  .expense th,
+.expense th,
   .expense td {
     border: 1px solid #93e95e;
     padding: 10px;
     text-align: left;
     background-color: #6ec240;
     color: white;
-  }
+  } 
 
   
   

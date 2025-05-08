@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,18 +40,6 @@
             cursor: pointer;
             padding: 15px;
             font-weight: bold;
-            position: relative;
-        }
-
-        .faq-question::after {
-            content: "➕";
-            position: absolute;
-            right: 20px;
-            font-size: 18px;
-        }
-
-        .faq-item.active .faq-question::after {
-            content: "➖";
         }
 
         .faq-answer {
@@ -72,44 +61,37 @@
 <body>
 
     <div class="faq-container">
-        <h2>❓ FAQs Section</h2>
+        <h2> FAQs Section</h2>
 
         <div class="faq-item">
             <div class="faq-question">How does the points system work?</div>
-            <div class="faq-answer">You earn points for completing tasks, referring friends, and participating in
-                challenges.</div>
+            <div class="faq-answer">You earn points for completing tasks, referring friends, and participating in challenges.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">How do I claim my rewards?</div>
-            <div class="faq-answer">Go to the "Rewards" section, select your reward, and click "Claim". It will be
-                processed within 24 hours.</div>
+            <div class="faq-answer">Go to the "Rewards" section, select your reward, and click "Claim". It will be processed within 24 hours.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">How is the ranking calculated?</div>
-            <div class="faq-answer">Rank is based on total points, activity streaks, and bonus achievements. It updates
-                daily.</div>
+            <div class="faq-answer">Rank is based on total points, activity streaks, and bonus achievements. It updates daily.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">How often is the leaderboard updated?</div>
-            <div class="faq-answer">Leaderboard data is refreshed every midnight IST based on your latest activities.
-            </div>
+            <div class="faq-answer">Leaderboard data is refreshed every midnight IST based on your latest activities.</div>
         </div>
     </div>
 
     <script>
         const faqs = document.querySelectorAll('.faq-item');
-
         faqs.forEach(item => {
             const question = item.querySelector('.faq-question');
             question.addEventListener('click', () => {
-                // Close other open items
                 faqs.forEach(faq => {
                     if (faq !== item) faq.classList.remove('active');
                 });
-                // Toggle current
                 item.classList.toggle('active');
             });
         });
